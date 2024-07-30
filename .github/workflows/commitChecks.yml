@@ -36,7 +36,7 @@ jobs:
         ../gradlew installDist
         cd build/install/wres-external-services-tests
         ./gradlew testClasses
-
+ 
     # Create the system tests zip
     - name: Create systests zip
       run: |
