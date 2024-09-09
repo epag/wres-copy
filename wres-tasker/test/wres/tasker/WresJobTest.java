@@ -241,11 +241,7 @@ public class WresJobTest
         System.setProperty( BrokerManagerHelper.WRES_MONITOR_PASSWORD_SYSTEM_PROPERTY_NAME,
                             "test" );
 
-        //System properties for the client P12 file handed off to the broker. These settings are based
-        //on how the file was written, above. 
-        System.setProperty( Tasker.PATH_TO_CLIENT_P12_PNAME,
-                            WresJobTest.tempDir.toString() + "/" + WresJobTest.P12_FILE_NAME );
-        System.setProperty( Tasker.PASSWORD_TO_CLIENT_P12, passphrase );
+
     }
 
     @Test
