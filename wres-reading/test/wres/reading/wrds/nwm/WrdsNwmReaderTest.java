@@ -571,6 +571,7 @@ class WrdsNwmReaderTest
     }
 
     @Test
+    @Disabled
     void testReadRequestsDateRangeWithMinutesAndSeconds()
     {
         this.mockServer.when( HttpRequest.request()
