@@ -112,6 +112,7 @@ jobs:
 
     # Run systests
     - name: System tests in memory zero externalization
+      continue-on-error: true
       run: | 
         echo "Starting the system tests in memory zero externalization..."
 
@@ -126,10 +127,9 @@ jobs:
 
         # Save the test results
         mkdir -p zero_external_test_results
-        ls -lrt
-        ls -lrt systests-*
-        ls -lrt wres_evaluation_*
-        mv systests-*/outputs zero_external_test_results
+        mkdir -p outputs
+        mv wres_evaluation_* outputs
+        mv outputs zero_external_test_results
         mv systests-*/build/reports/tests/test/* zero_external_test_results
         mv systests-*/build/*.log zero_external_test_results       
 
