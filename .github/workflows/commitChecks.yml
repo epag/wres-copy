@@ -126,6 +126,7 @@ jobs:
 
         # Save the test results
         mkdir -p zero_external_test_results
+        ls -lrt
         mv systests-*/outputs zero_external_test_results
         mv systests-*/build/reports/tests/test/* zero_external_test_results
         mv systests-*/build/*.log zero_external_test_results       
