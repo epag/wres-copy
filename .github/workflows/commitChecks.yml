@@ -76,6 +76,7 @@ jobs:
   systests:
     needs: Build 
     runs-on: ubuntu-latest
+    continue-on-error: true
     permissions:
       contents: read
 
@@ -112,7 +113,6 @@ jobs:
 
     # Run systests
     - name: System tests in memory zero externalization
-      continue-on-error: true
       run: | 
         echo "Starting the system tests in memory zero externalization..."
 
@@ -135,7 +135,6 @@ jobs:
 
     # Run systests
     - name: System tests with external graphics and numerics writing
-      continue-on-error: true
       run: | 
         echo "Starting the system tests with external graphics and numerics writing..."
 
@@ -156,7 +155,6 @@ jobs:
 
     # Run systests
     - name: System tests with an H2 in-memory database
-      continue-on-error: true
       run: | 
         echo "Starting the system tests with an H2 in-memory database..."
         
@@ -174,7 +172,6 @@ jobs:
 
     # Run systests
     - name: System tests with the legacy XML evaluation language
-      continue-on-error: true
       run: | 
         echo "Starting the system tests with the legacy XML evaluation language..."
 
@@ -192,7 +189,6 @@ jobs:
 
     # Archive the artifacts created from this build
     - name: Archive system tests
-      continue-on-error: true
       uses: actions/upload-artifact@v4
       with:
         name: systest-result-artifacts
