@@ -139,16 +139,6 @@ jobs:
           mkdir upcomingRelease
           mkdir pastRelease
 
-      - name: Download latest release
-        uses: robinraju/release-downloader@v1
-        with:
-          latest: true
-          # Download the attached zipball (*.zip)
-          tarBall: true
-          zipBall: true
-          fileName: '*.zip'
-          out-file-path: 'pastRelease'
-
       - name: Download staging to be release
         uses: robinraju/release-downloader@v1
         with:
@@ -158,21 +148,6 @@ jobs:
           zipBall: true
           fileName: '*.zip'
           out-file-path: 'upcomingRelease'
-
-      - name: Migrate database from latest release
-        run: |
-          cd pastRelease
-          ls | grep -P 'wres-\d{8}-.*' | xargs chmod 777
-          ls | grep -P 'wres-\d{8}-.*' | xargs unzip
-          echo $(ls | grep -P 'wres-\d{8}-.{7}((?!zip).)*$')
-          cd $(ls | grep -P 'wres-\d{8}-.{7}((?!zip).)*$')
-          cd bin
-          mkdir smalldata
-          cp ../../../systests/smalldata/1985043012_DRRC2FAKE1_forecast.xml smalldata
-          cp ../../../systests/smalldata/1985043013_DRRC2FAKE1_forecast.xml smalldata
-          cp ../../../systests/smalldata/1985043014_DRRC2FAKE1_forecast.xml smalldata
-          cp ../../../systests/smalldata/DRRC2QINE_FAKE_19850430.xml smalldata
-          JAVA_OPTS="-Dwres.useDatabase=true -Dwres.useSSL=false -Dwres.username=wres_user -Dwres.databaseHost=localhost -Dwres.databaseName=wres8 -Dwres.password=postgres" ./wres execute ../../../systests/scenario500/evaluation.yml
 
       - name: Run upcoming release
         run: |
