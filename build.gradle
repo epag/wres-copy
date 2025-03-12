@@ -389,10 +389,10 @@ project(':wres-io') {
         implementation group: 'org.locationtech.jts', name: 'jts-core', version: '1.20.0'
         implementation group: 'org.locationtech.jts', name: 'jts-io', version: '1.20.0', ext: 'pom'
 
-        implementation 'org.liquibase:liquibase-core:4.31.0'
+        implementation 'org.liquibase:liquibase-core:4.29.2'
 
         // Use instead of the bridge between JUL and SLF4J. #60801-283
-        runtimeOnly 'com.mattbertolini:liquibase-slf4j:5.1.0'
+        runtimeOnly 'com.mattbertolini:liquibase-slf4j:5.0.0'
 
         compileOnly 'net.jcip:jcip-annotations:1.0'
 
@@ -611,10 +611,10 @@ project(':wres-reading') {
 
         implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.5.0-M3'
 
-        implementation 'org.liquibase:liquibase-core:4.31.0'
+        implementation 'org.liquibase:liquibase-core:4.29.2'
 
         // Use instead of the bridge between JUL and SLF4J. #60801-283
-        runtimeOnly 'com.mattbertolini:liquibase-slf4j:5.1.0'
+        runtimeOnly 'com.mattbertolini:liquibase-slf4j:5.0.0'
 
         compileOnly 'net.jcip:jcip-annotations:1.0'
 
