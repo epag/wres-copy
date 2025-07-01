@@ -254,6 +254,14 @@ jobs:
           h2_in_memory_test_results
           legacy_xml_results        
 
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v4
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v4
+
   dependency-submission:
     runs-on: ubuntu-latest
     permissions:
