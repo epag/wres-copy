@@ -38,12 +38,14 @@ jobs:
         ./gradlew distZip testCodeCoverageReport javadoc
         ls -lrt
         ls -lrt build
-        ./scripts/dockerize.sh
+
 
     - name: testing
       run: |
         ls -lrt
         ls -lrt build/distributions
-
-
-
+        ls -lrt ./wres-worker/build/distributions
+        ls -lrt ./wres-tasker/build/distributions
+        ls -lrt ./wres-writing/build/distributions
+        ls -lrt ./wres-vis/build/distributions
+        ./scripts/dockerize.sh
