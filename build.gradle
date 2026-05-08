@@ -391,7 +391,7 @@ project(':wres-datamodel') {
 
         // Backwards compatibility for JUnit 4 tests
         testCompileOnly 'junit:junit:4.13.2'
-        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.14.1'
+        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:6.0.3'
 
         testImplementation 'org.hamcrest:hamcrest-core:3.0'
         testRuntimeOnly 'si.uom:si-quantity:2.2.3'
@@ -480,7 +480,7 @@ project(':wres-io') {
 
         // Backwards compatibility for JUnit 4 tests
         testImplementation 'junit:junit:4.13.2'
-        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.14.1'
+        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:6.0.3'
 
         // In-memory implementation of a java.nio.file abstract file system api
         // to test writing of files without actually writing files on the host machine
@@ -627,7 +627,7 @@ project(':wres-writing') {
 
         // Backwards compatibility for JUnit 4 tests
         testImplementation 'junit:junit:4.13.2'
-        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.14.1'
+        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:6.0.3'
 
         // In-memory implementation of a java.nio.file abstract file system api
         // to test writing of files without actually writing files on the host machine
@@ -730,7 +730,7 @@ project(':wres-reading') {
 
         // Backwards compatibility for JUnit 4 tests
         testImplementation 'junit:junit:4.13.2'
-        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.14.1'
+        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:6.0.3'
 
         // In-memory implementation of a java.nio.file abstract file system api
         // to test writing of files without actually writing files on the host machine
@@ -806,7 +806,7 @@ project(':wres-metrics') {
 
         // Backwards compatibility for JUnit 4 tests
         testCompileOnly 'junit:junit:4.13.2'
-        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.14.1'
+        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:6.0.3'
     }
 
     test {
@@ -1065,7 +1065,7 @@ project(':wres-vis') {
 
         // Backwards compatibility for JUnit 4 tests
         testImplementation 'junit:junit:4.13.2'
-        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.14.1'
+        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:6.0.3'
 
         implementation 'com.google.protobuf:protobuf-java:3.25.8'
         implementation project(':wres-statistics')
@@ -1477,7 +1477,7 @@ project(':wres-tasker') {
         runtimeOnly 'org.glassfish.jersey.inject:jersey-hk2:3.1.11'
 
         testImplementation 'junit:junit:4.13.2'
-        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.14.1'
+        testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:6.0.3'
         testImplementation 'org.junit.jupiter:junit-jupiter-api:5.14.1'
         testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.14.1'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
@@ -2034,7 +2034,7 @@ dependencies {
 
     // Backwards compatibility for JUnit 4 tests
     testCompileOnly 'junit:junit:4.13.2'
-    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.14.1'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:6.0.3'
 
     testImplementation 'org.mockito:mockito-core:5.21.0'
 }
