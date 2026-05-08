@@ -35,8 +35,9 @@ jobs:
     # Disable aggregateJavaDocs
     - name: Run build
       run: |
-        ./gradlew build
         ./gradlew distZip testCodeCoverageReport javadoc
+        ls -lrt
+        ls -lrt build
 
     - name: testing
       run: |
