@@ -38,6 +38,7 @@ jobs:
         ./gradlew distZip testCodeCoverageReport javadoc
         ls -lrt
         ls -lrt build
+        ./scripts/dockerize.sh
 
     - name: testing
       run: |
