@@ -48,4 +48,4 @@ jobs:
         ls -lrt ./wres-tasker/build/distributions
         ls -lrt ./wres-writing/build/distributions
         ls -lrt ./wres-vis/build/distributions
-        ./scripts/dockerize.sh
+        ./scripts/poderize.sh
