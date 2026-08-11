@@ -37,6 +37,8 @@ jobs:
       run: |
         ./gradlew build
         ./gradlew distZip testCodeCoverageReport javadoc
+        podman ps -a
+        ./scripts/poderize.sh
 
     # Confirm the test code inside wres-external-services-tests zip compiles
     - name: Compile external-services-tests
